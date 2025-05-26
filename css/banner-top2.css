@@ -1,0 +1,154 @@
+.bn {
+  margin: 2rem auto;
+  display: block;
+  padding: 10px;
+  max-width: 95%;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.inner-bn {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.image-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.details-section {
+  padding: 10px;
+}
+
+.title h3 {
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.title2 h4 {
+  font-size: 1rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.5rem 1rem;
+}
+
+.features li {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.discount {
+  color: red;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.price-btn {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.price del {
+  color: #888;
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+}
+
+.btn {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .bn {
+    max-width: 1080px;
+    width: 100%;
+  }
+
+  .inner-bn {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-section {
+    flex: 1;
+    margin-bottom: 0;
+    max-width: 50%;
+  }
+  .image-section img {
+    width: 100%;
+    height: 20rem;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .details-section {
+    flex: 1;
+    margin-left: 1rem;
+  }
+
+  .title h3 {
+    font-size: 1.5rem;
+  }
+
+  .title2 h4 {
+    font-size: 1.2rem;
+  }
+
+  .features li {
+    font-size: 1rem;
+  }
+
+  .discount {
+    font-size: 1.2rem;
+  }
+
+  .price {
+    font-size: 1.2rem;
+  }
+
+  .price del {
+    font-size: 1rem;
+  }
+
+  .price-btn {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .btn {
+    width: auto;
+  }
+}

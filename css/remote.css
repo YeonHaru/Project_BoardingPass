@@ -1,0 +1,60 @@
+/* PC용 리모컨 */
+.remote-pc {
+  position: fixed;
+  top: 128px;
+  right: 20px;
+  background: dodgerblue;
+  padding: 10px;
+  border-radius: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.remote-pc button {
+  width: 100px;
+  margin: 5px 0;
+  padding: 10px;
+  background: #eee;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.remote-pc button:hover {
+  background: #ddd;
+}
+
+/* 모바일용 하단바 */
+.remote-mobile {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 1px solid #ccc;
+  display: none;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.remote-mobile button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* 반응형 설정 */
+@media (max-width: 1400px) {
+  .remote-pc {
+    display: none;
+  }
+  .remote-mobile {
+    display: flex;
+  }
+}

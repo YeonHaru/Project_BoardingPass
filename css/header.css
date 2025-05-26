@@ -1,0 +1,66 @@
+
+#top-fixed {
+  background-color: dodgerblue;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+/* 모바일 기본 레이아웃 */
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+#title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#top-menu {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 100%;
+}
+
+#top-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
+
+#top-menu li a:hover {
+  opacity: 0.7;
+}
+
+/* PC 레이아웃 (768px 이상) */
+@media (min-width: 768px) {
+  .header-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  #title {
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  #top-menu {
+    justify-content: flex-end;
+    width: auto;
+  }
+}

@@ -1,0 +1,124 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+footer {
+  padding-top: 3.5rem;
+  width: 80%;
+  height: auto;
+  background-color: white;
+  margin-top: 2.5rem;
+}
+
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.social-icons a {
+  margin-left: 12px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons a img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+.credit-icons {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 25px 0 0 15px;
+  justify-content: left;
+}
+
+.credit-icons a {
+  margin-left: 12px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.credit-icons a img {
+  width: 40px;
+  height: 25px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+.footer-sections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 1rem 2rem;
+}
+
+.footer-li {
+  min-width: 200px;
+  flex: 1;
+}
+
+.footer-li a {
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-left: 2rem;
+  padding: 5px 0 5px 0;
+}
+.team {
+  height: 1px;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 100%;
+  justify-content: center;
+}
+
+.tmd {
+  font-size: 0.8rem;
+  margin: 5px 0;
+  padding-top: 5px;
+  text-align: center;
+}
+.footer-sections {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding: 0 0.6rem;
+}
+.pay {
+  margin-left: 2.5rem;
+}
+
+@media screen and (min-width: 768px){
+  .footer {
+    width: 80%;
+    height: 0 auto;
+  }
+
+  .footer-sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1rem;
+    align-items: stretch;
+  }
+
+  .footer-li {
+    margin-left: 0;
+    flex: 1 1 180px; /* 최소 너비 설정, 반응형에서도 잘 작동 */
+  }
+
+  }
+
+
+
+@media screen and (min-width: 1024px){
+  .footer {width: 60%; height: 0 auto;}
+
+
+}

@@ -1,0 +1,159 @@
+.open {
+  padding: 0 0 0.7rem 1rem;
+}
+/* 이미지 두개, 밑에 설명글 */
+.article-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.article-box {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+  margin: 0 8px 0 8px;
+}
+.article-box img {
+  width: 100%;
+  /* 이미지에 따라 조정 필요함 */
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+.article-text {
+  padding-left: 3px;
+}
+.article-text2 {
+  text-align: right;
+  padding-right: 5px;
+}
+/*  이미지 왼쪽,설명 우측 */
+/* PC 화면 2개식 */
+
+.media-box {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  position: relative;
+}
+.media-img {
+  width: 30%;
+
+  margin: 3px;
+  border-radius: 5px;
+}
+
+.media-text {
+  padding: 5px 3px 3px 3px;
+  font-size: 13px;
+}
+
+.media-text2 {
+  /* text-align: right; */
+  padding: 5px 10px 0 0;
+}
+.media-box button {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  padding: 6px 12px;
+  height: 25px;
+  width: 100px;
+  display: flex;
+  align-items: center; /* 수직 정렬 */
+  justify-content: center; /* 수평 정렬 */
+  background-color: dodgerblue;
+  color: white;
+  border-style: none;
+}
+/* 이미지 한개, 밑에 설명글 */
+/* PC는 이미지 4개 */
+.article-container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.article-box2 {
+  width: 99%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+  margin: 5px 5px 5px 5px;
+}
+
+.article-box2 img {
+  width: 100%;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  margin: 0 auto;
+}
+.box2-text {
+  text-align: center;
+}
+.today {
+  text-align: center;
+}
+/* 태블릿 */
+@media screen and (min-width: 768px) {
+  .article-container2 {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .article-box2 {
+    width: 23%;
+    margin: 0 7px 0 7px;
+  }
+  .article-text {
+    font-size: 20px;
+    padding-left: 15px;
+  }
+  .article-text2 {
+    padding-right: 20px;
+    text-align: right;
+  }
+  .media-text {
+    padding: 15px 0 0 2.5rem;
+    font-size: 20px;
+  }
+  .media-text2 {
+    padding-top: 20px;
+  }
+  .media-box button {
+    height: 35px;
+    width: 120px;
+    font-size: 17px;
+    bottom: 10px;
+    right: 30px;
+  }
+}
+
+/* PC */
+@media screen and (min-width: 1280px) {
+  .article-container {
+    margin: 0 auto;
+  }
+  .media-img {
+    width: 35%;
+  }
+  .media-text {
+    font-size: 1.5rem;
+   
+  }
+  .media-text2 {
+    padding-top: 7rem;
+    
+  }
+  .media-box button {
+    height: 40px;
+    width: 200px;
+    font-size: 25px;
+    bottom: 10px;
+    right: 30px;
+  }
+}

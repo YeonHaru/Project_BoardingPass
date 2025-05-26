@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boarding Pass</title>
+
+    <!--TODO CSS -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/search-box.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/contents.css" />
+    <link rel="stylesheet" href="./css/remote.css" />
+    <link rel="stylesheet" href="./css/banner-top2.css">
+    <link rel="stylesheet" href="./css/bottom-contents.css">
+
+    <!-- TODO JS -->
+    <script src="./js/reomote.js"></script>
+  </head>
+  <body>
+    <!-- TODO 리모컨 -->
+    <div>
+      <!-- 리모컨 (PC용) -->
+      <div class="remote remote-pc">
+        <button onclick="scrollToSection('top')">⬆️ UP</button>
+        <!-- todo : ()에 이동시키고자 하는 클래스 별명 넣기(현재임시) -->
+        <button onclick="scrollToSection('open')">열려라지갑</button>
+        <button onclick="scrollToSection('media-box')">추천</button>
+        <button onclick="scrollToSection('today')">특가</button>
+        <button onclick="scrollToSection()">⬇️ DOWN</button>
+      </div>
+
+      <!-- 리모컨 (모바일용 하단바) -->
+      <div class="remote remote-mobile">
+        <button onclick="scrollUp()">⬆️ UP</button>
+        <!-- todo : ()에 이동시키고자 하는 클래스 별명 넣기(현재임시) -->
+        <button onclick="scrollToSection('open')">📍</button>
+        <button onclick="scrollToSection('media-box')">🗺️</button>
+        <button onclick="scrollToSection('today')">👜</button>
+        <button onclick="scrollDown()">⬇️ DOWN</button>
+      </div>
+    </div>
+
+    <!-- TODO 최상단 헤더 -->
+    <header id="top-fixed">
+      <div class="header-inner">
+        <h1 id="title">BOARDING PASS</h1>
+        <nav>
+          <ul id="top-menu">
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">문의</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- TODO 검색박스 -->
+    <div id="page1">
+      <section class="ticket">
+        <div class="ticket-border top"></div>
+
+        <div class="ticket-body">
+          <!-- 왼쪽 정보 -->
+          <div class="ticket-left">
+            <div class="form-group">
+              <label for="from">From</label>
+              <input type="text" id="from" placeholder="출발지" />
+            </div>
+            <div class="form-group">
+              <label for="to">To</label>
+              <input type="text" id="to" placeholder="도착지" />
+            </div>
+            <div class="form-group">
+              <label for="start-date">출발일</label>
+              <input type="date" id="start-date" />
+            </div>
+            <div class="form-group">
+              <label for="end-date">도착일</label>
+              <input type="date" id="end-date" />
+            </div>
+          </div>
+
+          <!-- 오른쪽 정보 -->
+          <div class="ticket-right">
+            <label for="people">인원</label>
+            <select id="people">
+              <option value="">선택</option>
+              <option value="1">1명</option>
+              <option value="2">2명</option>
+              <option value="3">3명</option>
+              <option value="4">4명</option>
+            </select>
+            <p>즐거운 비행을 시작합니다</p>
+            <button type="submit">검색</button>
+          </div>
+        </div>
+        <div class="ticket-border bottom"></div>
+      </section>
+
+      <!-- 상단광고 -->
+      <article>
+        <div class="bn">
+          <div class="inner-bn">
+            <div class="image-section">
+              <img src="./img/에스토니아.jpg" alt="여행 이미지" />
+            </div>
+            <div class="details-section">
+              <div class="title"><h3>[특별할인이벤트!]</h3></div>
+              <div class="title2"><h4>에스토니아 6박</h4></div>
+              <ul class="features">
+                <li>고급호텔</li>
+                <li>테마파크</li>
+                <li>호밀빵+베리보르스트</li>
+              </ul>
+              <div class="discount">최대 5만원 즉시할인</div>
+              <div class="price-btn">
+                <div class="price">
+                  <del>3,154,000원</del>
+                  <span class="discounted">할인가 : 2,599,000원~</span>
+                </div>
+                <button class="btn">예약하기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div id="page2">
+      <!--TODO 요 아래 컨텐츠 추가하시면 됩니다.  -->
+      <!-- 이미지 두개, 밑에 설명글 -->
+      <!-- TODO:2025년 5월 23일 수정본 -->
+      <h2 class="open">미리 준비하는 여름휴가</h2>
+      <div class="article-container">
+        <article class="article-box">
+          <img src="./img/괌-해변.jpg" alt="괌" />
+          <div class="article-text">
+            <h4>해외 여행</h4>
+            <h3>[괌-리조트]대한항공 인기호텔5일</h3>
+            <br /><br />
+            <p>#인천공항 #커플여행추천#여름휴양지</p>
+          </div>
+          <h3 class="article-text2">595,000원~</h3>
+        </article>
+
+        <article class="article-box">
+          <img src="./img/오키나와-스노쿨링.jpg" alt="오키나와" />
+          <div class="article-text">
+            <h4>해외 여행</h4>
+            <h3>[일본-오키나와]오키나와 3박4일</h3>
+            <br /><br />
+            <p>#스노쿨링 포함 #온천 #조식3회</p>
+          </div>
+          <h3 class="article-text2">543,000원~</h3>
+        </article>
+      </div>
+      <!-- TODO:2025년 5월 23일 수정본 -->
+      <br /><br />
+      <div>
+        <!-- 이미지 왼쪽,설명 우측 -->
+         <!-- TODO: 2025년 5월 26일 수정본 -->
+        <h2 class="open">이번주 인기 추천지역</h2>
+        
+        <article class="media-box">
+          <img src="./img/스위스.jpg" alt="스위스" class="media-img" />
+          <div class="media-text">
+            <h4>[패키지]스위스[노옵션]5/6일</h4>
+            <p>#스위스온천#스위스일주#루체른</p>
+            <h4 class="media-text2">799,000원 부터~</h4>
+          </div>
+          <button>예약하기</button>
+        </article>
+        <article class="media-box">
+          <img src="./img/비치빌라 리조트.jpg" alt="다낭" class="media-img" />
+          <div class="media-text">
+            <h4>[패키지]다낭/호이안 4/5일</h4>
+            <p>#노옵션#노쇼핑#리조트#불꽃축제</p>
+            <h4 class="media-text2">399,000원 부터~</h4>
+          </div>
+           <button>예약하기</button>
+        </article>
+         <!-- TODO: 2025년 5월 26일 수정본 -->
+        <br /><br />
+        <!-- 이미지 한개, 밑에 설명글 -->
+        <h4 class="today">오늘만 특가</h4>
+        <div class="article-container2">
+          <article class="article-box2">
+            <img src="./img/fox.jpg" alt="체코" />
+            <div class="box2-text">
+              <h3>체코-프라하</h3>
+              <p>맥주 맛도리</p>
+            </div>
+          </article>
+          <article class="article-box2">
+            <img src="./img/fox.jpg" alt="일본" />
+            <div class="box2-text">
+              <h3>일본-골목</h3>
+              <p>사케 맛도리</p>
+            </div>
+          </article>
+          <article class="article-box2">
+            <img src="./img/fox.jpg" alt="일본" />
+            <div class="box2-text">
+              <h3>일본-골목</h3>
+              <p>사케 맛도리</p>
+            </div>
+          </article>
+          <article class="article-box2">
+            <img src="./img/fox.jpg" alt="일본" />
+            <div class="box2-text">
+              <h3>일본-골목</h3>
+              <p>사케 맛도리</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+        <h4 class="tip">2025년 버킷 리스트</h4>
+    <article class="article-tipbox1">
+      <div class="articles-garo">
+        <div class="article-tip1">
+          <img class=tip-image src="./img/fox.jpg" alt="체코" />
+          <div class="tipbox1-text">
+            <h3>올해는 가야할 곳</h3>
+            <p>#제주도#울릉도#섬</p>
+          </div>
+        </div>
+        <div class="article-tip1">
+          <img class=tip-image src="./img/fox.jpg" alt="체코" />
+          <div class="tipbox1-text">
+            <h3>올해는 가야할 곳</h3>
+            <p>#제주도#울릉도#섬</p>
+          </div>
+        </div>
+        <div class="article-tip1">
+          <img class=tip-image src="./img/fox.jpg" alt="체코" />
+          <div class="tipbox1-text">
+            <h3>올해는 가야할 곳</h3>
+            <p>#제주도#울릉도#섬</p>
+          </div>
+        </div>
+        <div class="article-tip1">
+          <img class=tip-image src="./img/fox.jpg" alt="체코" />
+          <div class="tipbox1-text">
+            <h3>올해는 가야할 곳</h3>
+            <p>#제주도#울릉도#섬</p>
+          </div>
+        </div>
+      </div>
+    </article>
+    <footer>
+      <div class="footer-sections">
+        <div class="footer-li">
+          <ul class="top-mg">
+            <li>
+              <h4><a href="#">고객 문의</a></h4>
+            </li>
+            <li><a href="#">고객센터</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">서비스 보장제</a></li>
+            <li><a href="#">서비스 상세내용</a></li>
+          </ul>
+
+          <div class="social-icons">
+            <a href="#"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png"
+                alt="Instagram"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"
+                alt="YouTube"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/2111/2111728.png"
+                alt="KakaoTalk"
+            /></a>
+          </div>
+        </div>
+        <div class="footer-li">
+          <ul>
+            <li>
+              <h4><a href="#">회사 소개</a></h4>
+            </li>
+            <li><a href="#">BOARDING PASS</a></li>
+            <li><a href="#">채용</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보 처리방침</a></li>
+          </ul>
+        </div>
+        <div class="footer-li">
+          <ul>
+            <li>
+              <h4><a href="#">기타 서비스</a></h4>
+            </li>
+            <li><a href="#">숙소 등록</a></li>
+            <li><a href="#">모든 호텔</a></li>
+            <li><a href="#">여행자 보험</a></li>
+            <li><a href="#">액티비티 상품 제휴</a></li>
+          </ul>
+        </div>
+      </div>
+      <br />
+      <div class="credit-icons">
+        <a href="#"><img src="img/BC.jpg" alt="BC" /></a>
+        <a href="#"><img src="./img/JCB.jpg" alt="JCB" /></a>
+        <a href="#"><img src="./img/master.jpg" alt="master" /></a>
+        <a href="#"><img src="./img/samsung.jpg" alt="samsung" /></a>
+        <a href="#"><img src="./img/unionpay.jpg" alt="unionpay" /></a>
+        <a href="#"><img src="./img/VISA.jpg" alt="VISA" /></a>
+      </div>
+      <div class="team">
+        <div class="tmd-line">
+          <p class="tmd">
+            김재현 | 최종일 | 서덕규 | 신승화 | 문려경 | 윤주성 | 강대성
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
