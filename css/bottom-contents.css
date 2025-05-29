@@ -40,11 +40,10 @@
   .articles-garo {
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: center; /* ← 중앙 정렬 */
     gap: 50px;
     padding: 20px 5%;
   }
-
   .article-tip1 {
     width: auto;
   }
