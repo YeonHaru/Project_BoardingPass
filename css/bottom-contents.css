@@ -1,74 +1,62 @@
+/* Article Tip Responsive CSS */
 
-.tip{
-    text-align: center; 
-    font-size: 40px;
-    margin: 1rem;
+.tip {
+  text-align: center;
+  font-size: 40px;
+  margin: 1rem;
 }
+
+.article-tip1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .tip-image {
-  width: 400px;       
-  height: 400px;      
+  width: 300px;
+  height: 300px;
   object-fit: cover;
+  border-radius: 50%;
   display: block;
 }
-.article-tip1{
-    display: flex;
-    flex-direction:column;
-    align-items:center;
-    width: 600px;
-    
-}
-.article-tip1 img {
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    
-}
+
 .tipbox1-text {
-    text-align: center;
-    font-size: 25px;
-    margin-top: 10px;
-    
-}
-.articles-garo {
-  display: grid;       
-  gap: 50px;            
-  justify-content: center; 
-  flex-wrap: wrap;       
-  padding: 10px;
+  text-align: center;
+  font-size: 25px;
+  margin-top: 10px;
 }
 
-@media screen and (min-width: 1024px){
-.tip-image {
-  width: 400px;       
-  height: 400px;      
-  border-radius: 50%; 
-  object-fit: cover;
-  display: block;
+.articles-garo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 10px;
+  width: 100%;
 }
-.article-tip1 img {
-    width: 400px;
-    height: 400px;
+
+/* PC 화면 */
+@media screen and (min-width: 1024px) {
+  .articles-garo {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 20px 5%;
+  }
+
+  .article-tip1 {
+    width: auto;
+  }
+
+  .tip-image {
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     object-fit: cover;
-    
-}
-.articles-garo {
-  display: flex;       
-  gap: 250px;            
-  justify-content: center; 
-  flex-wrap: wrap;       
-  padding: 20px;
-}
-.article-tip1{
-    display: flex;
-    flex-direction:column;
-    align-items:center;
-    width: 240px;
-}
-.tipbox1-text {
-    text-align: center;
+  }
+
+  .tipbox1-text {
     font-size: 15px;
-    margin-top: 10px;
-    
-}
+  }
 }
